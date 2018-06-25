@@ -1,0 +1,179 @@
+//正文
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.container {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background: #fbfbfb;
+}
+
+//滑动轮播1
+.container_top {
+    margin: auto;
+    margin-top: 44px;
+    width: 1000px;
+    height: 365px;
+    background: #FFFFFF;
+    .pro_menu {
+        height: 57px;
+        ul {
+            margin-left: 15px;
+            float: left;
+            width: 954px;
+            height: 57px;
+            border-bottom: 1px solid #8c8c8c;
+            li {
+                float: left;
+                width: 90px;
+                height: 57px;
+                text-align: center;
+                padding-top: 30px;
+                a {
+                    font-size: 18px;
+                    color: #333;
+                }
+            }
+            li:first-child a {
+                border-bottom: 3px solid #333333;
+            }
+            li:last-child a {
+                width: 95px;
+                display: block;
+                color: #FFFFFF;
+                background: #eb2d58;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+        }
+    }
+    .pro_menu1 {
+        height: 260px;
+        float: left;
+        .pro1 {
+            position: relative;
+            float: left;
+            width: 195px;
+            height: 260px;
+            img {
+                width: 160px;
+                height: 160px;
+                text-align: center;
+            }
+            p {
+                margin-top: 15px ;
+                text-align: center;
+                font-size: 14px;
+                color: #666666;
+                a {
+                    color: #000000;
+                }
+            }
+        }
+        .por_left {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 800px;
+            background: #8C8C8C;
+            opacity: 0.8;
+            i {
+                text-align: center;
+                padding-left: 12px;
+                line-height: 50px;
+                color: #FFFDEF;
+                font-size: 30px !important;
+            }
+        }
+        .por_right {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 800px;
+            right: 130px;
+            background: #8C8C8C;
+            opacity: 0.8;
+            i {
+                text-align: center;
+                padding-left: 12px;
+                line-height: 50px;
+                color: #FFFDEF;
+                font-size: 30px !important;
+            }
+        }
+         :hover {
+            border: 2px solid #c31f3a;
+            img {
+                transition: all 0.5s;
+                transform: translateY(10px);
+                cursor: pointer;
+                border: none;
+            }
+            p {
+                border: none;
+            }
+        }
+    }
+}
+
+//滑动轮播2
+.container_center {
+    width: 1000px;
+    height: 833px;
+    margin: auto;
+    background: paleturquoise;
+    .container_center1{
+        margin-top:30px;
+        height:40px;
+        background: #fbfbfb;
+        border-bottom: 1px solid #c4193f;
+       h2{
+           float:left;
+           font-weight: normal;
+       }
+       ul li{
+           margin: 10px;
+           width: 81px;
+           float:right;
+           a{
+               color:#666666;
+           }
+       }
+    }
+    .container_center2{
+        display: flex;
+        justify-content: space-between;
+        height:333px;
+        background: palegreen;
+       .container_center2_a{
+         width: 194px;
+         height:333px;
+         float:left;
+         img{
+            float:left;
+             width: 194px;
+             height: 194px;
+         } 
+            //计时器
+             .container_time{
+                 overflow: hidden; 
+                 width: 194px;
+                 height:27px;
+                 background: #3d3d3d;
+             }
+             .xsqg{
+                 display: block;
+                 width:194px;
+                 height:77px;
+                 .xsqg_titel1{
+                   font-size: 12px;
+                   color: #666666;
+                 }
+             } 
+        }
+    }
+}
