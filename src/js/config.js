@@ -14,7 +14,7 @@ require.config({
 		xm_carousel: "lib/jquery-plugins/jquery.xm_carousel",
 		fly : "lib/jquery-plugins/jquery.fly.min",
 		zoom : "lib/jquery-plugins/jquery.elevateZoom-3.0.8.min",
-		load : "js/loadHeaderAndFooter"
+		load : "js/loadHeaderAndFooter",
 	},
 	shim : {
 		xm_carousel : {

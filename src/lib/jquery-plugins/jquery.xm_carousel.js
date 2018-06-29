@@ -33,7 +33,12 @@
 			// 动态生成HTML结构
 			let html = `<ul style="list-style: none; position: relative;">
 								${lis}
-							</ul>`;
+							</ul>
+							<div class="pages">
+								${points}
+							</div>
+							<div class="prev">&lt;</div>
+							<div class="next">&gt;</div>`;
 			// 将生成的HTML结构放置到容器中
 			this.container.html(html);
 			// 设置元素CSS样式
@@ -54,39 +59,46 @@
 				left: 0,
 				display: "none"
 			}).first().show();
-
+			// .pages
+			$(".pages", this.container).css({
+				position: "absolute",
+				width: "100%",
+				height: 30,
+				background: "#000",
+				bottom: 0
+			});
 			// 所有小圆点
 			this.points = $("i", this.container);
 			this.points.css({
 				display: "inline-block",
 				width: 20,
 				height: 20,
-				margin: 20,
+				margin: 5,
 				borderRadius: 10,
 				background: "#fff"
 			}).first().css({
-         	background:"#f00"
+				background:"#f00"
 			});
-//			// 向前/后
-//			$(".prev,.next", this.container).css({
-//				width: 50,
-//				height: 100,
-//				background: "#000",
-//				lineHeight: "100px",
-//				textAlign: "center",
-//				color: "#fff",
-//				position: "absolute",
-//				top:0,
-//				bottom: 0,
-//				margin:"auto"
-////			});
-//			$(".next",this.container).css({
-//				right: 0
-//			});
-			 判断是否显示按钮
-//			if (!this.showBtn)
-//				$(".pages, .prev, .next", this.container).hide();
-//		},
+			// 向前/后
+			$(".prev,.next", this.container).css({
+				width: 50,
+				height: 100,
+				background: "#000",
+				lineHeight: "100px",
+				textAlign: "center",
+				color: "#fff",
+				position: "absolute",
+				top:0,
+				bottom: 0,
+				margin:"auto"
+			});
+			$(".next",this.container).css({
+				right: 0
+			});
+			// 判断是否显示按钮
+			if (!this.showBtn)
+				$(".pages, .prev, .next", this.container).hide();
+		},
 		// 图片轮播切换
 		move : function(){
 			// 当前图片淡出
@@ -125,16 +137,16 @@
 				that.nextIndex = index;
 				that.move();
 			});
-			 $(this.points).each((index, element)=>{
-			 	$(element).on("click", ()=>{
-			 		// 获取小点的索引
-			 		const idx = $(element).index(); // 或是使用 index 变量
-			 		if(this.currentIndex == idx)
-			 			return;
-			 		this.nextIndex = idx;
-			 		this.move();
-			 	});
-			 });
+			// $(this.points).each((index, element)=>{
+			// 	$(element).on("click", ()=>{
+			// 		// 获取小点的索引
+			// 		const idx = $(element).index(); // 或是使用 index 变量
+			// 		if(this.currentIndex == idx)
+			// 			return;
+			// 		this.nextIndex = idx;
+			// 		this.move();
+			// 	});
+			// });
 
 			// 向前/后翻页
 			$(".prev", this.container).click(()=>{

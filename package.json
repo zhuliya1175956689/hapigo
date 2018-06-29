@@ -1,14 +1,22 @@
 {
   "name": "kuilegou",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "<http://www.happigo.com/register/>",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhuliya1175956689/happigo.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhuliya1175956689/happigo/issues"
+  },
+  "homepage": "https://github.com/zhuliya1175956689/happigo#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-connect": "^5.5.0",

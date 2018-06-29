@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Login</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<link rel="stylesheet" href="/css/login.css">
+<body>
+<div class="main">
+	<div class="head">
+		<h1 class="logo"><a href="#"><span>logo</span></a></h1>
+		<div class="logo_left"><img src="/img/top_center1.jpg" /></div>
+	</div>
+	<div class="login_con">
+		<div class="xinren">
+			<img src="/img/05657833660318005.png" />
+		</div>
+		<div class="login_login">
+			<div class="login_h2">
+				<h2>用户注册</h2>
+				<div class="logintop">
+					已有帐号
+					<a href="#">在此登录</a>
+				</div>
+			</div>
+			<div class="mc">
+				<div class="form">
+					<form action="login.php" method="post">
+						<input type="text" placeholder="请输入手机号码" class="cellphone"> <span id="username_info"></span><br/>
+						<div class="login_tt">
+					      <input type="text" placeholder="验证码" class="tt" id="verification">
+						  <a  class="tta"href="#">获取短信验证码</a><br/>
+						</div>
+						<input type="password" placeholder="请输入密码"class="pas" id="password"><br/>
+						<input type="password" placeholder="请再次输入密码" class="pass" id="password1">
+						<div class="err_box">
+							<input type="text" placeholder="验证码" class="plac">
+							<img src="/img/index.png"/>
+							<a href="#">换一张</a><br/>
+							<!--<a class="zhuce">立即注册</a>-->
+							<input  class="zhuce" type="submit" value="立即注册">
+							<div class="agree">
+								<input type="checkbox" checked="checked">
+								<label for="autoLogin">注册即表示同意快乐购<span><a href="#" target="_blank">《用户服务协议》</a></span>条款</label>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer"></div>
+<script src="/lib/requirejs/require.js" data-main="/js/login"></script>
+</body>
+</html>		

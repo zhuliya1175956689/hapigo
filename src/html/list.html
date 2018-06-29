@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>list</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<link rel="stylesheet"href="/css/list.css">
+<link rel="stylesheet" href="/css/base.css">
+<body>
+<div class="header"></div>
+   <div class="center_list">
+	 <div class="list_content">
+	<div class="ClearFix">
+		<a href="#">首页</a><span>&gt;</span>
+		<a href="#">搜索结果</a><span>&gt;</span>
+		<a href="#">“严选”</a><span>&gt;</span>
+	</div>
+<div class="list_head">
+	<div class="list_label">排序:</div>
+	<ul class="list_sort">
+		<li class="on">
+			<a href="#" title="默认排序">默认</a>
+		<li>
+			<a href="#" title="点击按销量从高到低排序">销量</a>
+		</li>
+		<li>
+			<a href="#" title="点击按价格从高到低排序">价格</a>
+		</li>
+	</ul>
+	<div class="list_page">
+		<div class="list_pa">
+				共<span style="color: red;">493</span>个商品
+				<span class="s_line">|</span>
+			<span class="sp_red">1</span>/13页
+		</div>
+		<ul>
+			<li><span>上一页</span></li>
+			<li>
+				<a class="demo" href="#"><span>下一页</span></a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="list_bottom">
+	<div class="list_list">
+	<script id="hot_sale_temp" type="text/html">
+  		{{each list prod}}
+  		<a href="#">
+  			<li>
+  				<span class="id" style="display: none;">{{prod.id}}</span>
+  				<img src="{{prod.img}}" class="img-responsive"/>
+				<span class="btn5"style="color:red;font-size: 18px;text-align: center;">{{prod.price}}</span>
+				<del style="color: #504E4E;font-size: 13px;">{{prod.del}}</del>
+				<p>{{prod.title}}</p>
+				<span id="ee">{{prod.desc}}</span>s
+			</li>
+		</a>
+		{{/each}}
+  	</script>
+	</div>
+</div>
+</div>
+   </div>
+<div class="footer"></div>
+<script src="/lib/requirejs/require.js" data-main="/js/list1"></script>	
+</body>
+</html>
